@@ -1,12 +1,25 @@
-remote_theme: b2a3e8/jekyll-theme-console
+title: Retro Blog
+description: A minimal, dark mode blog with retro vibes
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
 
-header_pages:
-  - index.md
-  - about.md
+# Build settings
+markdown: kramdown
+permalink: /:title/
+paginate: 5
 
-style: dark # dark (default), light or hacker
-listen_for_clients_preferred_style: true # false (default) or true
+# # Plugins
+# plugins:
+#   - jekyll-feed
+#   - jekyll-paginate
+#   - jekyll-seo-tag
+#   - jekyll-sitemap
 
-footer: 'follow us on <a href="https://twitter.com/xxx">twitter</a>'
-
-google_analytics: UA-NNNNNNNN-N
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - dockerfile
+  - compose.yml
+  - README.md 
