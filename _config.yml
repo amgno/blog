@@ -1,9 +1,11 @@
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
+- jekyll-feed # for RSS feed
 
-
-
+# Blog settings
+permalink: /blog/:year/:month/:day/:title
+future: false # Set to true if you want to display future posts
 
 title: [A Magno's Blog]
 description: [A short description of your site's purpose]

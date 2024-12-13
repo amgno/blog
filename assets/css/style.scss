@@ -1,11 +1,26 @@
-
----
----
-
 @import "{{ site.theme }}";
-
 
 body {
   background-color: #000;
   color: white;
+}
+
+// Blog styles
+.posts {
+  list-style-type: none;
+  padding: 0;
+}
+
+.posts li {
+  margin-bottom: 1em;
+}
+
+.post {
+  margin-bottom: 2em;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
 }
