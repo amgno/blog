@@ -1,5 +1,5 @@
 ---
-title: A Magno's Blog
+title: /
 layout: home
 permalink: /
 ---
