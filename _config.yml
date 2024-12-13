@@ -1,8 +1,12 @@
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+remote_theme: b2a3e8/jekyll-theme-console
 
+header_pages:
+  - index.md
+  - about.md
 
+style: dark # dark (default), light or hacker
+listen_for_clients_preferred_style: true # false (default) or true
 
-title: [A Magno's Blog]
-description: [Text I find usefull sharing]
+footer: 'follow us on <a href="https://twitter.com/xxx">twitter</a>'
+
+google_analytics: UA-NNNNNNNN-N
