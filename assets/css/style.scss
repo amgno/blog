@@ -39,11 +39,25 @@ pre.highlight {
 }
 
 // Image styling
-img {
+.post-content img,
+.page-content img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 1em auto;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-content figure,
+.page-content figure {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.post-content figcaption,
+.page-content figcaption {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.5em;
 } 

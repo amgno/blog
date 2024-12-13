@@ -29,3 +29,10 @@ plugins:
   - jekyll-relative-links
 
 listen_for_clients_preferred_style: true # true or false (default)
+
+# Assets configuration
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
