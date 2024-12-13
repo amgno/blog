@@ -1,15 +1,15 @@
-remote_theme: pages-themes/minimal@v0.2.0
+# Example Site settings
+
+#google_analytics: UA-NNNNNNNN-N
+
+#header_pages:
+#  - index.md
+#  - about.md
+
+#footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
+
+#style: light # dark (default) or light
+#listen_for_clients_preferred_style: true # true or false (default)
+
 plugins:
-- jekyll-remote-theme
-- jekyll-feed
-
-# Blog settings
-permalink: /blog/:year/:month/:day/:title/
-baseurl: ""
-url: "" # Replace with your site URL if needed
-
-title: [A Magno's Blog]
-description: [A short description of your site's purpose]
-logo: /assets/images/logo.png
-
-show_downloads: false
+  - jekyll-seo-tag
