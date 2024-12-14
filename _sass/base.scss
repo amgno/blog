@@ -24,8 +24,45 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 /**
  * Layout
  */
-.container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
-p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
+.container { 
+  width: $container-width;  
+  max-width: $container-max-width;  
+  margin-right: auto;  
+  margin-left: auto; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  object-fit: contain;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1em auto;
+  
+  img {
+    margin: 0 auto;
+  }
+  
+  figcaption {
+    text-align: center;
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    color: #666;
+  }
+}
+
+.post-content,
+.page-content {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 footer { color: var(--text-color);  border-top: var(--border);  margin: 20px auto 15px;  padding-top: 10px;  text-align: right; }
 header { margin-top: 25px;  margin-bottom: 10px; }
 header p { text-align: left;  margin: 0; }
@@ -131,3 +168,152 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .highlight .vg { color: var(--code-color-7); } /* Name.Variable.Global */
 .highlight .vi { color: var(--code-color-7); } /* Name.Variable.Instance */
 .highlight .il { color: var(--code-color-14); } /* Literal.Number.Integer.Long */
+
+p { 
+  word-wrap: break-word;  
+  word-break: break-word;  
+  white-space: pre-wrap; 
+  margin-bottom: 15px; 
+}
+
+// Inline code
+code {
+  background: #272822;
+  color: #f8f8f2;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+// Code blocks
+pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 0.8em;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1em 0;
+  font-size: 0.85em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+blockquote {
+  border-left: 3px solid var(--base-color);
+  margin: 1em 0;
+  padding-left: 1em;
+  font-style: italic;
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.95em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  
+  th, td {
+    padding: 8px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+  }
+  
+  th {
+    border-bottom-width: 2px;
+  }
+}
+
+ul, ol {
+  padding-left: 2em;
+  margin: 1em 0;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2em 0;
+}
+
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.9em; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.2em 0 0.4em;
+  font-weight: 600;
+}
+
+.task-list-item {
+  list-style-type: none;
+  
+  input[type="checkbox"] {
+    margin-right: 0.5em;
+  }
+}
+
+dl {
+  margin: 1em 0;
+  
+  dt {
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  
+  dd {
+    margin-left: 2em;
+  }
+}
+
+.highlight {
+  .lineno {
+    color: #666;
+    padding-right: 1em;
+    margin-right: 0.5em;
+    border-right: 1px solid #444;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  pre {
+    margin: 0;
+  }
+}
+
+// Copy button styling
+.copy-code-button {
+  position: absolute;
+  top: 0.4em;          // Adjusted position
+  right: 0.4em;
+  padding: 0.3em 0.5em;
+  background: #444;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.75em;   // Smaller button
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Make sure code blocks have relative positioning for the copy button
+pre.highlight {
+  position: relative;
+}

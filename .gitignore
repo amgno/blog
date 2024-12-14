@@ -1,0 +1,45 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+
+# Docker
+docker-compose.override.yml
+bundle_cache/
+
+# Ruby
+*.gem
+.bundle/
+Gemfile.lock
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+.log/
+
+# Environment variables
+.env
+.env.*
+
+# Build artifacts
+dist/
+build/
+tmp/ 

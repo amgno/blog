@@ -7,7 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     copyButton.textContent = 'Copy';
     
     copyButton.addEventListener('click', () => {
-      const code = codeBlock.querySelector('code').textContent;
+      const codeLines = codeBlock.querySelectorAll('td:not(.lineno)');
+      const code = Array.from(codeLines)
+        .map(line => line.textContent)
+        .join('\n')
+        .trim();
+      
       navigator.clipboard.writeText(code).then(() => {
         copyButton.textContent = 'Copied!';
         setTimeout(() => {

@@ -42,22 +42,77 @@ pre.highlight {
 .post-content img,
 .page-content img {
   max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
   margin: 1em auto;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  object-fit: contain;
 }
 
+// Container width constraint for images
+.post-content,
+.page-content {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+// If you have figures, they need the same constraints
 .post-content figure,
 .page-content figure {
   margin: 1em 0;
   text-align: center;
+  max-width: 100%;
+  width: 100%;
 }
 
+// Make sure figcaptions don't overflow either
 .post-content figcaption,
 .page-content figcaption {
   font-size: 0.9em;
   color: #666;
   margin-top: 0.5em;
-} 
+  max-width: 100%;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+// Post list styling
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-item {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: baseline;
+}
+
+.post-meta {
+  flex: 0 0 auto;
+  margin-right: 1em;
+  color: #666;
+}
+
+.post-link {
+  flex: 1;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  
+  &:hover {
+    border-bottom-color: currentColor;
+  }
+}
+
+// Make sure links are clickable
+a {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+  
