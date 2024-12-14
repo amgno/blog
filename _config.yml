@@ -28,11 +28,25 @@ plugins:
   - jekyll-sitemap
   - jekyll-relative-links
 
-listen_for_clients_preferred_style: true # true or false (default)
+listen_for_clients_preferred_style: true
 
-# Assets configuration
+# Defaults and assets configuration
 defaults:
   - scope:
       path: "assets/images"
     values:
       image: true
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+
+# Permalink structure
+permalink: /:title/
+
+# Show future posts
+future: true
+
+# Debug settings
+verbose: true

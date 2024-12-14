@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "idk cuh"
+title:  "idk c222uh"
 date:   2024-12-14 12:32:45 +0100
-categories: boo
+categories: [demo]
 ---
 
 # Q for med

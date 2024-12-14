@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sueg barca"
+title:  "a"
 date:   2024-12-14 12:32:45 +0100
 categories:
 ---
